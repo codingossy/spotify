@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 217.2 32.6% 17.5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1 {
+    @apply text-2xl
+  }
+
+  h2 {
+    @apply text-xl
+  }
+
+  h3,
+  h4 {
+    @apply text-xl
+  }
+}
+
+
+@layer utilities {
+  .filter-none {
+    filter: none;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+
+@layer components {
+  .pagesMargin {
+    @apply mt-24 mb-10
+  }
+
+  section {
+    @apply my-20 container
+  }
+
+  .section {
+    @apply mt-28 md:mt-20
+  }
+
+  .toggle {
+    @apply fixed top-0 bottom-0 z-30 w-[80%] transition-all ease-in duration-500
+  }
+
+  .btn {
+    @apply p-2 bg-blue-500 rounded-md text-white w-56
+  }
+}
+
+/*important keys */
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Oxanium', sans-serif;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body,
+:root {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 100%;
+  background-color: black;
+  color-scheme: dark;
+  color: #dadada;
+}
+
+.bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* width */
+
+.bar-width {
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+
+.bar-width::-webkit-scrollbar {
+  width: 4px;
+}
+
+.bar-width::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.bar-width::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
